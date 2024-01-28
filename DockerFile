@@ -1,0 +1,27 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y nginx
+
+COPY index.html /var/www/html/index.html
+
+COPY pagina1.html /var/www/html/pagina1.html
+
+COPY pagina2.html /var/www/html/pagina2.html
+
+COPY pagina3.html /var/www/html/pagina3.html
+
+COPY pagina4.html /var/www/html/pagina4.html
+
+COPY pagina5.html /var/www/html/pagina5.html
+
+COPY pagina6.html /var/www/html/pagina6.html
+
+COPY pagina7.html /var/www/html/pagina7.html
+
+COPY pagina8.html /var/www/html/pagina8.html
+
+COPY pagina9.html /var/www/html/pagina9.html
+
+EXPOSE 80
+
+CMD ["nginx","-g","daemon off;"]
